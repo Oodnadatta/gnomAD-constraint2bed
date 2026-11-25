@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this script, please cite it as below."
+title: "gnomAD-constraint2bed"
+version: "1.0.0"
+type: software
+abstract: >-
+  Build BED files of constrained genes (missense Z score and LOEUF)
+  from the gnomAD v4.1.2 gene constraint table (GRCh38).
+authors:
+  - family-names: "Denommé-Pichon"
+    given-names: "Anne-Sophie"
+    orcid: "https://orcid.org/0000-0002-8986-8222"
+keywords:
+  - gnomAD
+  - gene constraint
+  - LOEUF
+  - missense Z score
+  - BED
+license: MIT
+repository-code: "https://github.com/Oodnadatta/gnomAD-constraint2bed"
+date-released: 2026-11-26
