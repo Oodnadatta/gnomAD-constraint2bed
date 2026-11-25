@@ -1,6 +1,4 @@
-Build BED files of constrained genes (missense Z score and LOEUF) from the gnomAD v4.1.2 constraint table, using all transcripts.
-
-# gnomAD-Constraint → BED
+# gnomAD-constraint2bed
 
 Author: **Anne-Sophie Denommé-Pichon**
 
