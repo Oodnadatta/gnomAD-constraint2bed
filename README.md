@@ -30,8 +30,8 @@ The table is about 1.5 GB once decompressed; reading it takes a few minutes.
 ## Usage
 
 ```bash
-python3 gnomad_constraint_to_bed_asdp.py gnomad.v4.1.2.constraint_metrics.tsv.bgz
-python3 gnomad_constraint_to_bed_asdp.py gnomad.v4.1.2.constraint_metrics.tsv.bgz \
+python3 constraint2bed_asdp.py gnomad.v4.1.2.constraint_metrics.tsv.bgz
+python3 constraint2bed_asdp.py gnomad.v4.1.2.constraint_metrics.tsv.bgz \
     --missense-z 4 --loeuf 0.45 --outdir results
 ```
 
@@ -57,7 +57,7 @@ Five tab-separated columns, no header:
 
 | Column | Content |
 |---|---|
-| 1 | chromosome (`chr1`, …, `chrX`, `chrY`) |
+| 1 | chromosome (`chr1` to `chr22`, `chrX`, `chrY`) |
 | 2 | start (0-based, BED convention) |
 | 3 | end |
 | 4 | gene symbol (Ensembl gene ID when the gene has no symbol) |
@@ -74,15 +74,15 @@ number of readthrough genes split, number of genes in each file.
 
 ## Method
 
-- **Ensembl transcripts only.** The table holds Ensembl (`ENST…`) and RefSeq transcripts,
-  but only the Ensembl transcripts have coordinates.
+- **Ensembl transcripts only.** The table holds Ensembl transcripts (identifiers starting
+  with `ENST`) and RefSeq transcripts, but only the Ensembl transcripts have coordinates.
 - **All transcripts, not only MANE Select.** A gene is kept as soon as **at least one**
   of the gene's transcripts passes the threshold, so that exons present only in
   alternative transcripts (including MANE Plus Clinical) are not missed.
 - **Whole transcripts.** For each gene, only the transcripts that pass the threshold are used.
   The region starts at the first base of these transcripts and ends at the last base of
   these transcripts: UTRs, exons **and introns** are included.
-- **Genes without a symbol** are named by their Ensembl gene ID (`ENSG…`).
+- **Genes without a symbol** are named by their Ensembl gene ID (starting with `ENSG`).
 - **Genes on chrX and chrY** (pseudoautosomal regions) get one line per chromosome.
 - **Excluded transcripts.** Transcripts flagged in `gene_flags` are excluded from both files:
   - `low_exome_mapping_quality`: in these regions (mostly segmental duplications) reads map
