@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use this script, please cite it as below."
 title: "gnomAD-constraint2bed"
 version: "1.0.0"
+doi: 10.5281/zenodo.24545409
 type: software
 abstract: >-
   Build BED files of constrained genes (missense Z score and LOEUF)
@@ -18,4 +19,4 @@ keywords:
   - BED
 license: MIT
 repository-code: "https://github.com/Oodnadatta/gnomAD-constraint2bed"
-date-released: 2026-11-26
+date-released: 2026-11-25
