@@ -1,4 +1,5 @@
 # gnomAD-constraint2bed
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24545409.svg)](https://doi.org/10.5281/zenodo.24545409)
 
 Author: **Anne-Sophie Denommé-Pichon**
 
@@ -124,9 +125,8 @@ with a liftover tool, such as UCSC liftOver (https://genome.ucsc.edu/cgi-bin/hgL
 or CrossMap. Some regions may fail to convert.
 
 ## Citation
-
-If you use this script, please cite it (see `CITATION.cff`) and cite gnomAD as
-recommended on https://gnomad.broadinstitute.org.
+If you use this script, please cite it: https://doi.org/10.5281/zenodo.24545409 (see also `CITATION.cff`),
+and cite gnomAD as recommended on https://gnomad.broadinstitute.org.
 
 ## License
 
